@@ -77,7 +77,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"text\": \"This is a sample post.\"}"
+					"raw": "{\n    \"text\": \"This is a sample post.\"\n\n}"
 				},
 				"url": {
 					"raw": "{{base_url}}/posts/addpost",
@@ -131,20 +131,43 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"postID\": \"1\"}"
+					"raw": ""
 				},
 				"url": {
-					"raw": "{{base_url}}/posts/deletepost",
+					"raw": "{{base_url}}/posts/deletepost/1",
 					"host": [
 						"{{base_url}}"
 					],
 					"path": [
 						"posts",
-						"deletepost"
+						"deletepost",
+						"1"
 					]
 				}
 			},
 			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
 		}
 	],
 	"variable": [
